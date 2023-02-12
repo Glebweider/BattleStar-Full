@@ -1,7 +1,7 @@
 # BattleStar
 
 <div align="center">
-  <a href="https://github.com/Glebweider/BattleStar-Full"><img src='./FrontEnd - Web - Next Ts/public/BattleStar.svg' width="40%" /></a>
+<a href="https://github.com/Glebweider/BattleStar-Full"><img src='./FrontEnd - Web - Next Ts/public/BattleStar.svg' width="40%" /></a>
 </div>
 
 <p align="center" >
