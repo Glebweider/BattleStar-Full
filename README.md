@@ -92,9 +92,13 @@ $ npm run start:prod
 
 # API Routers
 ## Applications Routes
-  #### Swagger Docs
+  #### [Swagger Docs](https://swagger.io/)
   ``` 
   http://localhost:4000/api/docs
+  ```
+  #### [AdminJs](https://adminjs.co/)
+  ``` 
+  http://localhost:4000/admin
   ```
 ## Auth Routers
   #### Register Router
