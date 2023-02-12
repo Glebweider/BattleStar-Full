@@ -1,34 +1,24 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Param, Delete } from '@nestjs/common';
+import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { User } from 'src/DataBase/schemas/user.schema';
 import { UsersService } from './users.service';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
 
+@ApiTags('Пользователи')
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+  constructor(private readonly userService: UsersService) {}
 
-  @Post()
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.usersService.create(createUserDto);
-  }
-
+  @ApiOperation({summary: 'Получение пользователей'})
+  @ApiResponse({status: 200, type: [User]})
   @Get()
-  findAll() {
-    return this.usersService.findAll();
+  async GetUsers(){
+      return this.userService.getUsers()
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.usersService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.usersService.update(+id, updateUserDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.usersService.remove(+id);
+  @ApiOperation({summary: 'Получение пользователя'})
+  @ApiResponse({status: 200, type: User})
+  @Get(':uuid')
+  async GetUser(@Param('uuid') uuid:string){
+      return this.userService.getUser(uuid)
   }
 }

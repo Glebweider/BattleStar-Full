@@ -1,6 +1,7 @@
 import { 
     Body, 
     Controller, 
+    Get, 
     Post 
 } from '@nestjs/common';
 import { UserDto } from './dto/user.dto';
@@ -29,7 +30,7 @@ export class AuthController {
 
     @ApiOperation({summary: 'Авторизация пользователя по токену'})
     @ApiResponse({status: 200})
-    @Post('/jwt')
+    @Get('/jwt')
     jwtAuth(@Body() UserDto: UserDto){
         return this.authService.jwtAuth(UserDto)
     }

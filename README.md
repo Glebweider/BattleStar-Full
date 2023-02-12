@@ -1,7 +1,7 @@
 # BattleStar
 
 <div align="center">
-  <a href="https://github.com/Glebweider/BattleStar-Full"><img src='./FrontEnd - Web - Next Ts/public/BattleStar.svg' width="100%" /></a>
+  <a href="https://github.com/Glebweider/BattleStar-Full"><img src='./FrontEnd - Web - Next Ts/public/BattleStar.svg' width="40%" /></a>
 </div>
 
 <p align="center" >
@@ -13,7 +13,7 @@
   </a>
 </p>
 
-## Project stats
+## Project technologies
 <table><tr><td valign="top" width="33%">
 
 ### Frontend  
@@ -38,4 +38,208 @@
 
 </td></tr></table>  
 
-<br/>  
+<br/> 
+
+# Guide
+## Installation FrontEnd
+
+```bash
+# transition to FrontEnd
+$ cd '.\FrontEnd - Web - Next Ts\'
+
+# install
+$ npm install
+```
+
+## Running the app
+
+```bash
+# development
+$ npm run dev
+
+# start 
+$ npm run start
+
+# build applications
+$ npm run build
+```
+
+
+## Installation BackEnd
+
+
+```bash
+# transition to BackEnd
+$cd '.\BackEnd - Server - Nest Ts\'
+
+# install
+$ npm install
+```
+
+## Running the app
+
+```bash
+# watch mode
+$ npm run start
+
+# development
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+
+# API Routers
+## Applications Routes
+  #### Swagger Docs
+  ``` 
+  http://localhost:4000/api/docs
+  ```
+## Auth Routers
+  #### Register Router
+  ```
+    Register EndPoint:
+      request: { 
+        url: "http://localhost:4000/api/auth/registartion",
+        method: "POST",
+        body: {
+          "user_username": string
+          "user_password": string
+          "user_email": string
+          "user_ip": string
+          "user_country": string
+        }
+      },
+      response: {
+        "successfull": boolean,
+        "message": string,
+        "jwt-token": string 
+      }
+  ```
+  ### Login Router
+  ```
+    Login EndPoint:
+      request: { 
+        url: "http://localhost:4000/api/auth/login",
+        method: "POST",
+        body: {
+          "user_password": string
+          "user_email": string
+          "user_ip": string
+        }
+      },
+      response: {
+        "successfull": boolean,
+        "message": string,
+        "jwt-token": string 
+      }
+  ```
+  ### Jwt Router
+  [UserSchema](#UserSchema)
+  ```
+    Jwt EndPoint: 
+      request: {
+        url: "http://localhost:4000/api/auth/jwt",
+        method: "GET",
+        headers: {
+          'Authorization': `Bearer ${TOKEN}`
+        }
+      },
+      response: {UserChema}
+  ```
+
+  ## Users Routers
+
+  ### Users Router
+  [UserSchema](#UserSchema)
+  ```
+    Users EndPoint:
+      request: { 
+        url: "http://localhost:4000/api/users/",
+        method: "GET"
+      },
+      response: {
+        [UserSchema]
+      }
+  ```
+
+  ### User Router
+  [UserSchema](#UserSchema)
+  ```
+    User EndPoint:
+      request: { 
+        url: "http://localhost:4000/api/users/:uuid (1234567890123)",
+        method: "GET",
+      },
+      response: {UserSchema} 
+  ```
+
+  ### User Router Avatar
+  ```
+    Avatar EndPoint:
+      request: { 
+        url: "http://localhost:4000/api/users/avatar/:uuid/:avatar",
+        method: "GET",
+      },
+      response: file(Avatar.png | jpg | svg | webm)
+  ```
+
+  ### User Router Avatar upload
+  ```
+    Avatar upload EndPoint:
+      request: { 
+        url: "http://localhost:4000/api/users/avatar/upload",
+        method: "POST",
+        body: formData
+      },
+      response: {
+        "url": string('http://localhost:4000/Uploads/avatars/{uuid}/{file.name}')
+      }
+  ```
+
+  # Schemas
+
+  ### UserSchema DB
+  <div id="UserSchema">
+
+    username: string,
+    mail: string,
+    uuid: number,
+    password: string,
+    avatar: string,
+    ipp: string,
+    bio: string,
+    country: string
+    datareg: string
+    UserData: {
+      GameData: {
+        Avg: number
+        Tournaments: number
+        Matchs: number
+        MapsPlay: number
+        Win: number
+        Loser: number
+        Kills: number
+        Deads: number
+        Accuracy: number
+        Hours: number
+        HistoryMatchs: []
+      },
+      CardInfo: {
+        CardID: number
+        Subcribe: string
+        RefUrl: string
+        RefUser: number
+        money: number
+        Transactions: []
+      },
+      FriendsData: {
+        Friends: [],
+        FriendsToAccept: [],
+        BlackList: []
+      },
+      Binding: {}
+    }
+  </div>
+
