@@ -3,6 +3,7 @@
 .navigatePanel {
     display: inline-flex;
     position: fixed;
+    z-index: 9999;
     background: #101011;
     width: 100%;
     height: 78px; 
@@ -22,42 +23,47 @@
     height: 48px;    
     display: flex;
     flex-direction: column;
+    .MoneyBal {
+        max-width: 135px;
+        min-width: 85px;
+        .BalanceText {
+            height: 19px;
+            width: 55px;
+            color: #787878;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+        }
+        .ButtonAddMoney {
+            margin-left: 8px;
+            width: 19.5px;
+            height: 19.5px;        
+            :hover {
+                fill: #787878;
+            }
+        }
+    }
+    .BalanceUser {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FAC704;
+    }
 }
-.MoneyBal {
-    max-width: 135px;
-    min-width: 85px;
-}
-.BalanceUser {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    color: #FAC704;
-}
-.BalanceText{
-    height: 19px;
-    width: 55px;
-    color: #787878;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-}
-.Plus{
-    margin-left: 8px;
-    width: 19.5px;
-    height: 19.5px;
-}
-.IconGame{
+
+
+.IconGame {
     width: 30px;
     height: 30px;
     border-radius: 5px;
 }
 
-.lefticon{
+.lefticon {
     width: 150px;
     height: 100%;
     margin-left: 125px;
@@ -67,7 +73,7 @@
         margin-left: 5px;
     }
 }
-.ButtonAuth{
+.ButtonAuth {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +90,7 @@
     text-align: center;
     color: #1A1A1C;
 }
-.Auth{
+.Auth {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +98,7 @@
     -webkit-app-region: none; 
 }
 
-.nain{
+.nain {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +106,7 @@
     -webkit-app-region: none; 
 }
 
-.texti{    
+.texti {    
     border-radius: 4px;
     color: #787878;
     outline: 0;
@@ -117,11 +123,8 @@
     font-family: 'Iceland', cursive;
     font-family: 'Roboto', sans-serif;
 }
-.activeMenuButton{
-    background-color: #606060;
-}
 
-.name{
+.name {
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -147,6 +150,7 @@
 }
 
 .sideBar {
+    z-index: 9999;
     display: flex;
     flex-direction: column;
 	position: fixed;
@@ -167,11 +171,11 @@
     right: 20px;
 }
 
-.activeMenu{
+.activeMenu {
     display: none;
 }
 
-.domenu2{ 
+.domenu2 { 
     position: fixed;
     margin-top: 72px;
     width: 440px;
@@ -182,10 +186,10 @@
     border-radius: 4px;
     margin-right: 265px;
     min-height: 85px;
-    z-index: 1;
+    z-index: 10000;
 }
 
-.avatardiv{
+.avatardiv {
     width: 50px;
     height: 46px;
     margin-right: 7px;
@@ -194,19 +198,19 @@
     align-items: center;
 }
 
-.UsernameAndRank{
+.UsernameAndRank {
     display: flex;
     flex-direction: column;
     margin-right: 5px;
 }
 
-.avatar{
+.avatar {
     width: 46px;
     height: 46px;
     border-radius: 50%;
 }
 
-.domenu3{ 
+.domenu3 { 
     position: fixed;
     margin-top: 72px;
     width: 340px;
@@ -217,13 +221,29 @@
     border-radius: 4px;
     margin-right: 335px;
     min-height: 85px;
-    z-index: 1;
-}
-.messagers{
+    z-index: 10000;
+}    
+
+.activeMenuButton {
+    background: #606060; 
+}    
+.messagers {
     display: flex;
     justify-content: space-around;
     .messagerNot {
         display: flex;
+        .messageNot.activeMenuButton {
+            background: #606060;
+            display: flex;
+            margin-left: 18px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
         .messageNot {    
             background: #242424;
             display: flex;
@@ -234,11 +254,28 @@
             width: 40px;
             height: 40px;
             cursor: pointer;
-        }    
-    }
+            transition: 0.2s;
+        }  
+        :hover {
+            background: #606060;
+            transition: 0.2s;
+        }  
+    }        
     .messagerChat {
         display: flex;
-        .messageChat{
+        .messageChat.activeMenuButton {
+            background: #606060;
+            margin-left: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .messageChat {
             margin-left: 18px;
             display: flex;
             align-items: center;
@@ -248,6 +285,11 @@
             width: 40px;
             height: 40px;
             cursor: pointer;
+            transition: 0.2s;
+        }  
+        :hover {
+            background: #606060;
+            transition: 0.2s;
         }    
     }    
 }
@@ -264,7 +306,7 @@
     width: 100%;
     height: 100%;
 }
-.domenu{ 
+.domenu { 
     position: fixed;
     margin-top: 72px;
     width: 220px;
@@ -274,7 +316,7 @@
     backdrop-filter: blur(60px);
     border-radius: 4px;
     margin-right: 20px;
-    z-index: 1;
+    z-index: 10000;
 }
 
 .errorMenu {
