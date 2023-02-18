@@ -10,6 +10,10 @@
     -webkit-app-region: drag; 
 }
 
+.Progress {
+    margin-left: 100px;
+}
+
 .dow {
     width: 44px;
     height: 100%;
@@ -154,7 +158,7 @@
     display: flex;
     flex-direction: column;
 	position: fixed;
-    padding-top: 5px;
+        padding-top: 5px;
 	width: 100px;
 	height: 100%;
     background: #101011;
@@ -320,14 +324,10 @@
 }
 
 .errorMenu {
+    position: fixed;
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-end;  
-    margin-top: 250px; 
-}
-
-.Error {
-    position: fixed;
-    max-width: 350px;
-    margin-bottom: 40px;
+    justify-content: center;  
+    margin-top: 78px; 
 }

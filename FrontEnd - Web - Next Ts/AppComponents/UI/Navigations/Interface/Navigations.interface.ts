@@ -1,1 +1,2 @@
-export interface INavbarNavigate {}
+export interface INavbarAppNavigate {}
+export interface INavbarLandingNavigate {}

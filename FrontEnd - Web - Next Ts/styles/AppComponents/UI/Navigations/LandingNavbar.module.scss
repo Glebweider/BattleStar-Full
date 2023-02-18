@@ -1,0 +1,118 @@
+.NavbarLanding {
+    position: fixed;
+    width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NavbarLeft{
+    margin-left: 98px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.NavbarLeft:hover {
+    transition: 0.4s;
+    color: #FAC704
+}
+
+.NavbarRight {
+    margin-right: 58px;    
+    display: flex;
+    align-items: center;
+    max-width: 480px;
+    width: 100%;
+    height: 100%;
+}
+
+.NavbarButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.NavbarButtonDownload {
+    width: 207px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F8F8F8;
+    border-radius: 4px;
+    transition: 0.4s;
+    cursor: pointer;
+    a {
+        transition: 0.4s;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        color: #F8F8F8;
+    }
+    .DownloadIcon {
+        transition: 0.4s;
+        margin-right: 7px;
+        width: 18px;
+        height: 23px;
+        fill: #F8F8F8;
+    }    
+}
+
+.NavbarButtonDownload:hover {
+    transition: 0.4s;
+    border: 1px solid #FAC704;
+    a {
+        transition: 0.4s;
+        color: #FAC704; 
+    }
+    .DownloadIcon {
+        transition: 0.4s;
+        margin-right: 7px;
+        width: 18px;
+        height: 23px;
+        fill: #FAC704;
+    }
+    
+}
+
+.NavbarButtonCreate:hover {
+    transition: 0.4s;
+    background: #1A1A1C;
+    a {
+        transition: 0.4s;
+        color: #FAC704;
+    }
+}
+
+.NavbarButtonCreate {
+    transition: 0.4s;
+    width: 209px;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #FAC704;
+    border-radius: 4px;
+    cursor: pointer;
+    a {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        transition: 0.4s;
+        color: #1A1A1C;
+    }
+}
+
+.NavbarLang {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 23px;
+}

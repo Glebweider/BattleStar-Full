@@ -13,11 +13,3 @@ export interface INavbarSettingsMenu {
 export interface INavigationMessageIndicate {
     CountMessage: number // Количество сообщений которые пришли пользователю
 }
-
-export interface IErrorMenu {
-    Severity: string, // Error, warning, info, success
-    SetIsOpen: boolean, //Открыто меню или нет?
-    TextAlert: string // Текст в ошибке
-}
-
-

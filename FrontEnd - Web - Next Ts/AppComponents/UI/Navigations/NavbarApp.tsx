@@ -1,10 +1,9 @@
-import styles from '@/styles/AppComponents/UI/Navigations/Navbar.module.scss';
+import styles from '@/styles/AppComponents/UI/Navigations/AppNavbar.module.scss';
 import classNames from 'classnames';
 import { 
   FC, 
   PropsWithChildren, 
-  useState, 
-  useEffect
+  useState
 } from 'react';
 import Logo from '../Assets/Logo';
 import { Coins } from '@/AppComponents/Misc/Config';
@@ -13,27 +12,27 @@ import NavbarNotMenu from '@/AppComponents/Logic/LogicUi/Navbar/NavbarNotMenu';
 import NavbarChatMenu from '@/AppComponents/Logic/LogicUi/Navbar/NavbarChatMenu';
 import NavbarMesageIndicate from '@/AppComponents/Logic/LogicUi/Navbar/NavbarMesageIndicate';
 import NavbarMenulink from '@/AppComponents/Logic/LogicUi/Navbar/NavbarMenulink';
-import NavbarErrorMessage from '@/AppComponents/Logic/LogicUi/Navbar/NavbarErrorMessage';
+import NavbarErrorMenu from '@/AppComponents/Logic/LogicUi/Navbar/NavbarErrorMenu';
 
 const Navbar:FC<PropsWithChildren> = ({children}) => {
   const [IsLoadingData, setIsLoadingData] = useState(false);
   const [IsAuthUser, setIsAuthUser] = useState(false);
 
   const OpenMenuChat = () => {
-    document.querySelector('#ButtonMenuChat')?.classList.toggle('Navbar_activeMenuButton__gpjH7');
-    document.querySelector('#ButtonMenuNot')?.classList.remove('Navbar_activeMenuButton__gpjH7');
-    document.querySelector('#ChatMenu')?.classList.toggle('Navbar_activeMenu___PZfh');
-    document.querySelector('#NotMenu')?.classList.add('Navbar_activeMenu___PZfh');
+    document.querySelector('#ButtonMenuChat')?.classList.toggle('AppNavbar_activeMenuButton__TtQ0_');
+    document.querySelector('#ButtonMenuNot')?.classList.remove('AppNavbar_activeMenuButton__TtQ0_');
+    document.querySelector('#ChatMenu')?.classList.toggle('AppNavbar_activeMenu__MTIa0');
+    document.querySelector('#NotMenu')?.classList.add('AppNavbar_activeMenu__MTIa0');
   }
   const OpenMenuNotoffication = () => {
-    document.querySelector('#ButtonMenuChat')?.classList.remove('Navbar_activeMenuButton__gpjH7');
-    document.querySelector('#ButtonMenuNot')?.classList.toggle('Navbar_activeMenuButton__gpjH7');
-    document.querySelector('#ChatMenu')?.classList.add('Navbar_activeMenu___PZfh');
-    document.querySelector('#NotMenu')?.classList.toggle('Navbar_activeMenu___PZfh');
+    document.querySelector('#ButtonMenuChat')?.classList.remove('AppNavbar_activeMenuButton__TtQ0_');
+    document.querySelector('#ButtonMenuNot')?.classList.toggle('AppNavbar_activeMenuButton__TtQ0_');
+    document.querySelector('#ChatMenu')?.classList.add('AppNavbar_activeMenu__MTIa0');
+    document.querySelector('#NotMenu')?.classList.toggle('AppNavbar_activeMenu__MTIa0');
   }
   const OpenMenuUser = () => {
-    document.querySelector('#buttonMenuUser')?.classList.toggle('Navbar_activeMenuButton__gpjH7');
-    document.querySelector('#SettingsMenu')?.classList.toggle('Navbar_activeMenu___PZfh');
+    document.querySelector('#buttonMenuUser')?.classList.toggle('AppNavbar_activeMenuButton__TtQ0_');
+    document.querySelector('#SettingsMenu')?.classList.toggle('AppNavbar_activeMenu__MTIa0');
   }
 
   return (
@@ -114,24 +113,30 @@ const Navbar:FC<PropsWithChildren> = ({children}) => {
                 </div>
               </div>
             }
-          </div>        
+          </div>  
       </header>
-      <div className={styles.allMenus}>        
-          <div 
-          id='ChatMenu'
-          className={classNames(styles.domenu3, styles.activeMenu)}>
-            <NavbarChatMenu user_username='123' />
-          </div>    
-          <div 
-          id='NotMenu' 
-          className={classNames(styles.domenu2, styles.activeMenu)}>
-            <NavbarNotMenu user_username='123' />
-          </div>
-          <div 
-          id='SettingsMenu' 
-          className={classNames(styles.domenu, styles.activeMenu)}>
-            <NavbarSettingsMenu user_username='123' />  
-          </div>
+      <div className={styles.allMenus}>
+        <div
+          id='ErrorMenu'
+          className={styles.errorMenu}
+        >
+          <NavbarErrorMenu />
+        </div>
+        <div 
+        id='ChatMenu'
+        className={classNames(styles.domenu3, styles.activeMenu)}>
+          <NavbarChatMenu user_username='123' />
+        </div>    
+        <div 
+        id='NotMenu' 
+        className={classNames(styles.domenu2, styles.activeMenu)}>
+          <NavbarNotMenu user_username='123' />
+        </div>
+        <div 
+        id='SettingsMenu' 
+        className={classNames(styles.domenu, styles.activeMenu)}>
+          <NavbarSettingsMenu user_username='123' />  
+        </div>
       </div>
       <div className={styles.sideBar}>
           <div className={styles.Logo}>
@@ -143,7 +148,6 @@ const Navbar:FC<PropsWithChildren> = ({children}) => {
           </div>
           <NavbarMenulink />
       </div>
-      <NavbarErrorMessage SetIsOpen={true} Severity='success' TextAlert="Хакер еблан" />
       <div>
           {children}
       </div>

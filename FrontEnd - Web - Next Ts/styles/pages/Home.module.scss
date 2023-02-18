@@ -1,10 +1,107 @@
 .Wrapper {
-  max-width: 100%;
-  width: 100%;
-  height: 3160px;
-  background: linear-gradient(180deg, rgb(12, 12, 14) 0%, #0C0C0E 100%);
-  .WrapperImage {
+    max-width: 100%;
+    height: 10221px;
     width: 100%;
-  }
+    background: radial-gradient(rgb(34, 34, 40) 0%, #232328 100%);
 }
 
+.WallpaperTop{
+    width: 100%;
+    max-height: 945px;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.39), #232328),
+        url('../../public/Wrappers/WrapperLandingPage.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.WallpaperContent {
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.WallContentHeader {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    text-align: center;
+    color: #F8F8F8;
+}
+
+.WallContent {
+    margin-top: 20px;
+    width: 100%;
+    height: 69px;
+    display: flex;
+    justify-content: center;
+}
+
+.WallContentText {
+    height: 69px;
+    width: 691px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #F8F8F8;
+}
+
+.WallButtons {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.WallButton {
+    transition: 0.3s;
+    width: 267px;
+    height: 62.77px;
+    background: rgba(250, 199, 4, 0.05);
+    border: 2px solid #FAC704;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        transition: 0.3s;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FAC704;
+    }
+    svg {
+        margin-left: 15px;
+    }
+}
+
+.WallButton:hover {
+    transition: 0.3s;
+    border: 2px solid #F8F8F8;
+    a {
+        transition: 0.3s;
+        color: #F8F8F8;
+    }
+    svg * {
+        transition: 0.3s;
+        fill: #F8F8F8;
+    }
+}
+
+.WallButtns {
+    max-width: 565px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
