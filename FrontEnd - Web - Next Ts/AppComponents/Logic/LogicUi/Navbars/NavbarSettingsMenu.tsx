@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { INavbarSettingsMenu } from "./Interface/Navbar.interface";
-import styles from '@/styles/AppComponents/LogicUI/Navbar/NavigationSettingsMenu.module.scss';
+import styles from '@/styles/AppComponents/LogicUI/Navbars/NavigationSettingsMenu.module.scss';
 import { FC } from "react";
 
 const NavbarSettingsMenu:FC<INavbarSettingsMenu> = ({user_username}) => {

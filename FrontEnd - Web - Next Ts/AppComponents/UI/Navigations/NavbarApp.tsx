@@ -7,12 +7,12 @@ import {
 } from 'react';
 import Logo from '../Assets/Logo';
 import { Coins } from '@/AppComponents/Misc/Config';
-import NavbarSettingsMenu from '@/AppComponents/Logic/LogicUi/Navbar/NavbarSettingsMenu';
-import NavbarNotMenu from '@/AppComponents/Logic/LogicUi/Navbar/NavbarNotMenu';
-import NavbarChatMenu from '@/AppComponents/Logic/LogicUi/Navbar/NavbarChatMenu';
-import NavbarMesageIndicate from '@/AppComponents/Logic/LogicUi/Navbar/NavbarMesageIndicate';
-import NavbarMenulink from '@/AppComponents/Logic/LogicUi/Navbar/NavbarMenulink';
-import NavbarErrorMenu from '@/AppComponents/Logic/LogicUi/Navbar/NavbarErrorMenu';
+import NavbarSettingsMenu from '@/AppComponents/Logic/LogicUi/Navbars/NavbarSettingsMenu';
+import NavbarNotMenu from '@/AppComponents/Logic/LogicUi/Navbars/NavbarNotMenu';
+import NavbarChatMenu from '@/AppComponents/Logic/LogicUi/Navbars/NavbarChatMenu';
+import NavbarMesageIndicate from '@/AppComponents/Logic/LogicUi/Navbars/NavbarMesageIndicate';
+import NavbarMenulink from '@/AppComponents/Logic/LogicUi/Navbars/NavbarMenulink';
+import NavbarErrorMenu from '@/AppComponents/Logic/LogicUi/Navbars/NavbarErrorMenu';
 
 const Navbar:FC<PropsWithChildren> = ({children}) => {
   const [IsLoadingData, setIsLoadingData] = useState(false);

@@ -1,4 +1,4 @@
-import styles from '@/styles/AppComponents/LogicUI/Navbar/NavigationErrorMenu.module.scss';
+import styles from '@/styles/AppComponents/LogicUI/Navbars/NavigationErrorMenu.module.scss';
 import { useState } from 'react';
 
 const NavbarErrorMenu = () => {

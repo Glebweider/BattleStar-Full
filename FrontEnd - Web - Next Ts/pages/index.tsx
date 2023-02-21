@@ -1,6 +1,8 @@
 import styles from '@/styles/pages/Home.module.scss';
 import HeaderMeta from '@/AppComponents/Logic/Meta/Header.meta';
 import NavbarLanding from '@/AppComponents/UI/Navigations/NavbarLanding';
+import SliderLanding from '@/AppComponents/Logic/LogicUi/Sliders/Slider.Landing';
+import FooterLanding from '@/AppComponents/UI/Navigations/FooterLanding';
 
 export default function Home() {
   return (
@@ -38,7 +40,20 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className={styles.MainContent}>
+          <div className={styles.MainContents}>
+            <div className={styles.Carusel}>
+              SliderLanding 
+            </div>
+          </div>
+          <FooterLanding />
+        </div>
       </main>
+      <style global jsx>{`        
+        body::-webkit-scrollbar {
+          width: 0;
+        }
+      `}</style>
     </>
   )
 }

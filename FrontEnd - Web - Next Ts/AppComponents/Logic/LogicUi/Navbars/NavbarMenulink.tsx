@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from '@/styles/AppComponents/LogicUI/Navbar/NavigationMenulink.module.scss';
+import styles from '@/styles/AppComponents/LogicUI/Navbars/NavigationMenulink.module.scss';
 import { useRouter } from "next/router";
 import classNames from "classnames";
 

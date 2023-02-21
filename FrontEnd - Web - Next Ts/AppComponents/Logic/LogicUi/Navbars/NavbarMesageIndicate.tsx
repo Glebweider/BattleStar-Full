@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from '@/styles/AppComponents/LogicUI/Navbar/NavigationMessageIndicate.module.scss';
+import styles from '@/styles/AppComponents/LogicUI/Navbars/NavigationMessageIndicate.module.scss';
 import { INavigationMessageIndicate } from './Interface/Navbar.interface';
 
 const NavbarMesageIndicate: FC<INavigationMessageIndicate> = ({CountMessage}) => {
