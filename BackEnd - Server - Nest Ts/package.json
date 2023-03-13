@@ -34,6 +34,8 @@
     "@nestjs/swagger": "^6.1.4",
     "adminjs": "^6.8.3",
     "bcryptjs": "^2.4.3",
+    "class-validator": "^0.13.2",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "express-formidable": "^1.2.0",
     "express-session": "^1.17.3",

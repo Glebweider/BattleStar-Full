@@ -1,2 +1,4 @@
 export interface INavbarAppNavigate {}
-export interface INavbarLandingNavigate {}
+export interface INavbarLandingNavigate {
+    DownloadSystems: any //функция скачивания
+}

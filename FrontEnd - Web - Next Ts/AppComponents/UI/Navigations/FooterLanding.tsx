@@ -12,35 +12,51 @@ const FooterLanding = () => {
                 <div className={styles.FooterNavigation}>
                     <div className={styles.FooterNav}>
                         <h3>Новости</h3>
-                        <div className={styles.FooterNavLInks}>
-                            <Link href={'#'}>Обновление 1.2</Link>
-                            <Link href={'#'}>Рейтинг игроков</Link>
-                            <Link href={'#'}>Лучшие команды</Link>                            
+                        <div className={styles.NavLinksTop}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Обновление 1.2</Link>
                         </div>
+                        <div className={styles.NavLinks}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Рейтинг игроков</Link>
+                        </div>
+                        <div className={styles.NavLinks}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Лучшие команды</Link>
+                        </div>                            
                     </div>
                     <div className={styles.FooterNav}>
                         <h3>Турниры</h3>
-                        <div className={styles.FooterNavLInks}>
-                            <Link href={'#'}>Любительские</Link>
-                            <Link href={'#'}>Профессионаьные</Link>
-                            <Link href={'#'}>Трансляции</Link>                            
+                        <div className={styles.NavLinksTop}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Любительские</Link>
                         </div>
+                        <div className={styles.NavLinks}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Профессионаьные</Link>
+                        </div>
+                        <div className={styles.NavLinks}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Трансляции</Link>
+                        </div>                            
                     </div>
                     <div className={styles.FooterNav}>
                         <h3>Трансляции</h3>
-                        <div className={styles.FooterNavLInks}>
-                            <Link href={'#'}>Прямые эфиры</Link>
-                            <Link href={'#'}>Записи матчей</Link>
-                            <Link href={'#'}>Турнирные игры</Link>                            
+                        <div className={styles.NavLinksTop}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Прямые эфиры</Link>
                         </div>
+                        <div className={styles.NavLinks}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Записи матчей</Link>
+                        </div>
+                        <div className={styles.NavLinks}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Турнирные игры</Link>
+                        </div>                            
                     </div>
                     <div className={styles.FooterNav}>
                         <h3>О BattleStar</h3>
-                        <div className={styles.FooterNavLInks}>
-                            <Link href={'#'}>Поддержка</Link>
-                            <Link href={'#'}>Партнёрам</Link>
-                            <Link href={'#'}>Как играть</Link>                            
+                        <div className={styles.NavLinksTop}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Поддержка</Link>
                         </div>
+                        <div className={styles.NavLinks}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Партнёрам</Link>
+                        </div>
+                        <div className={styles.NavLinks}>
+                            <Link className={styles.FooterNavLink} href={'#'}>Как играть</Link>
+                        </div>                            
                     </div>                
                     <div className={styles.FooterNavLinks}>
                         <div className={styles.FooterButtons}>

@@ -122,3 +122,54 @@
 .MainContents {
     flex: 1 1 auto;
 }
+
+.StatsContents {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.StatsContent {
+    width: 82%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Stats {
+    margin-top: 140px;
+    margin-left: 110px;
+    width: 517px;
+    height: 428px;
+    background: rgba(248, 248, 248, 0.01);
+    border: 1px solid #FAC704;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.StatsDetails {    
+    height: 105px;
+    width: 647px;
+    display: flex;
+    flex-direction: column;
+    h1 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: right;
+        color: #F8F8F8;
+    }
+    a {
+        margin-top: 36px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: right;
+        color: #BFBFBF;        
+    }
+}
