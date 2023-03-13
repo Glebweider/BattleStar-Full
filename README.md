@@ -210,9 +210,7 @@ $ npm run start:prod
     username: string,
     mail: string,
     uuid: number,
-    password: string,
     avatar: string,
-    ipp: string,
     bio: string,
     country: string
     datareg: string
